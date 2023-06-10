@@ -16,7 +16,24 @@ body {
     justify-content: center;
 
 }
+.slide{
+    animation: slide 6s ease-in-out ;
+}
+.animate-next{
+    animation: next 0.5s ease-in-out ;
+}
+.animate-prev{
+    animation: prev 0.5s ease-in-out ;
+}
+.animate-go{
 
+    animation: go 0.4s ease-in-out ;
+
+}
+.animate-come{
+    animation: come 0.4s ease-in-out ;
+
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -25,9 +42,8 @@ body {
     text-align: center;
     gap: 10px;
     height: 100vh;
-    animation: slide 4.95s ease-in-out infinite;
-
 }
+
 
 @keyframes slide  {
     0% {
@@ -47,6 +63,45 @@ body {
 
     100% {
         transform: translate(-100%);
+    }
+}
+@keyframes next  {
+    0% {
+        transform: translate(100%);
+    }
+
+    100% {
+        transform: translate(0%);
+    }
+}
+@keyframes go  {
+    0% {
+        transform: translate(0%);
+    }
+
+    100% {
+        transform: translate(-100%);
+        display: none;
+    }
+}
+@keyframes come  {
+    0% {
+        transform: translate(0%);
+    }
+
+    100% {
+        transform: translate(100%);
+        display: none;
+    }
+}
+
+@keyframes prev  {
+    0% {
+        transform: translate(-100%);
+    }
+
+    100% {
+        transform: translate(0%);
     }
 }
 .S {
@@ -98,7 +153,6 @@ h5 {
     color: white;
     background-color: #64748b;
     border: none;
-
     max-width: 60px;
     border-radius: .25rem;
     display: flex;
