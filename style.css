@@ -27,11 +27,11 @@ body {
 }
 .animate-go{
 
-    animation: go 0.4s ease-in-out ;
+    animation: go 0.2s ease-in-out ;
 
 }
 .animate-come{
-    animation: come 0.4s ease-in-out ;
+    animation: come 0.2s ease-in-out ;
 
 }
 .container {
@@ -68,10 +68,12 @@ body {
 @keyframes next  {
     0% {
         transform: translate(100%);
+        rotate: 10deg;
     }
 
     100% {
         transform: translate(0%);
+        rotate: 0deg;
     }
 }
 @keyframes go  {
@@ -81,27 +83,30 @@ body {
 
     100% {
         transform: translate(-100%);
-        display: none;
+
     }
 }
 @keyframes come  {
     0% {
         transform: translate(0%);
+        
     }
 
     100% {
         transform: translate(100%);
-        display: none;
+
     }
 }
 
 @keyframes prev  {
     0% {
         transform: translate(-100%);
+        rotate: -10deg;
     }
 
     100% {
         transform: translate(0%);
+        rotate: 0deg;
     }
 }
 .S {
